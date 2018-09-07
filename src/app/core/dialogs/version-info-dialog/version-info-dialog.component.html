@@ -1,0 +1,33 @@
+<h1 mat-dialog-title>
+  <span translate>version.title</span>
+</h1>
+<div mat-dialog-content>
+  <div>
+    <span translate>version.name</span>
+    <span>{{version.name}}</span>
+  </div>
+  <div>
+    <span translate>version.version</span>
+    <span>{{version.version}}</span>
+  </div>
+  <div>
+    <span translate>version.commit</span>
+    <span>{{version.hash}}</span>
+  </div>
+  <div>
+    <span translate>version.tag</span>
+    <span>{{version.tag}}</span>
+  </div>
+  <div>
+    <span translate>version.dirty</span>
+    <span>{{version.dirty}}</span>
+  </div>
+  <div>
+    <span translate>version.time</span>
+    <span>{{version.time}}</span>
+  </div>
+  <div>
+    <span translate>version.environment</span>
+    <span>{{environment.production ? 'production' : 'development'}}</span>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+<div *ngIf="display$ | async">
+  <ng-container *ngFor="let breadcrumb of breadcrumbs$ | async; last as last">
+    <span *ngIf="last"
+       style="padding: 5px;">{{breadcrumb.title}}</span>
+    <a *ngIf="!last"
+       style="padding: 5px;"
+       [routerLink]="breadcrumb.url">{{breadcrumb.title}}</a>
+  </ng-container>
+</div>

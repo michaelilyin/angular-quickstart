@@ -1,0 +1,9 @@
+<p>
+  user-dialog works!
+</p>
+<app-user-info [user]="user"></app-user-info>
+<a style="padding: 5px;" [routerLink]="['']">root</a>
+<a style="padding: 5px;" [routerLink]="['home']">home</a>
+<a style="padding: 5px;" [routerLink]="['landing']">landing</a>
+<a style="padding: 5px;" [routerLink]="{ outlets: { dialog: 'version'} }">version</a>
+<a style="padding: 5px;" [routerLink]="{ outlets: { dialog: 'users/123'} }">user 123</a>
