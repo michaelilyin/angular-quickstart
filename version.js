@@ -12,6 +12,7 @@ const versionInfo = {
   version: pack.version,
   name: pack.name,
   hash: git.hash,
+  repo: 'https://github.com/michaelilyin/angular-quickstart',
   tag: git.tag,
   dirty: git.dirty,
   time: new Date()

@@ -2,32 +2,41 @@
   <span translate>version.title</span>
 </h1>
 <div mat-dialog-content>
-  <div>
-    <span translate>version.name</span>
+  <div class="version-row">
+    <span class="version-label"
+          translate>version.name</span>
     <span>{{version.name}}</span>
   </div>
-  <div>
-    <span translate>version.version</span>
+  <div class="version-row">
+    <span class="version-label"
+          translate>version.version</span>
     <span>{{version.version}}</span>
   </div>
-  <div>
-    <span translate>version.commit</span>
-    <span>{{version.hash}}</span>
+  <div class="version-row">
+    <span class="version-label"
+          translate>version.commit</span>
+    <a href="{{version.repo}}/commit/{{version.hash}}"
+       target="_blank">{{version.hash}}</a>
   </div>
-  <div>
-    <span translate>version.tag</span>
-    <span>{{version.tag}}</span>
+  <div class="version-row">
+    <span class="version-label"
+          translate>version.tag</span>
+    <span>{{version.tag | nullable}}</span>
   </div>
-  <div>
-    <span translate>version.dirty</span>
-    <span>{{version.dirty}}</span>
+  <div class="version-row">
+    <span class="version-label"
+          translate>version.dirty</span>
+    <mat-checkbox [disabled]="true"
+                  [ngModel]="version.dirty"></mat-checkbox>
   </div>
-  <div>
-    <span translate>version.time</span>
-    <span>{{version.time}}</span>
+  <div class="version-row">
+    <span class="version-label"
+          translate>version.time</span>
+    <span>{{version.time | date:'medium'}}</span>
   </div>
-  <div>
-    <span translate>version.environment</span>
-    <span>{{environment.production ? 'production' : 'development'}}</span>
+  <div class="version-row">
+    <span class="version-label"
+          translate>version.environment</span>
+    <span>{{(environment.production ? 'version.production' : 'version.development') | translate}}</span>
   </div>
 </div>

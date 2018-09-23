@@ -1,0 +1,12 @@
+.version {
+  &-row {
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+    padding: 2px;
+  }
+
+  &-label {
+    width: 150px;
+  }
+}

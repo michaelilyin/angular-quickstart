@@ -4,11 +4,14 @@ export default {
       title: 'Build info',
       version: 'App version',
       name: 'App name',
-      commit: 'Commit hash',
+      commit: 'Commit',
       tag: 'VCS tag',
       dirty: 'Uncommitted',
       environment: 'Environment',
-      time: 'Build time'
+      time: 'Build time',
+
+      development: 'dev',
+      producton: 'prod'
     }
   }
-}
+};
